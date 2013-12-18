@@ -1,0 +1,8 @@
+{
+  "name": "pxt"
+, "version": "0.1.0"
+, "author": "timb"
+, "description": "pixel text renderer"
+, "main": "./src/compiled/pxt.js"
+, "keywords": ["pixel", "font", "canvas", "type", "text"]
+}

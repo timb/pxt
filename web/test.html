@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset=utf-8>
+<title>pxt pixel font renderer test</title>
+<link rel=stylesheet href=test.css>
+<script src=pxt.js></script>
+</head>
+<body>
+
+<div id=ui>
+  <h1>pxt pixel font renderer test</h1>
+  <textarea id=in_text></textarea>
+</div>
+
+<div id=out>
+  <canvas id=canvas></canvas>
+</div>
+
+</body>
+<script>
+var init = function(){
+  pxt.init();
+
+  var in_text = document.querySelector('#in_text');
+  var canvas = document.querySelector('#canvas');
+  canvas.width = 500
+  canvas.height = 200
+  var ctx = canvas.getContext('2d');
+
+  in_text.addEventListener('input', function(){
+    ctx.clearRect(0,0, canvas.width,canvas.height)
+    pxt(ctx, in_text.value, 0, 0)
+  })
+}
+init();
+</script>
+</html>
